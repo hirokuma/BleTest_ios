@@ -7,17 +7,22 @@
 //
 
 #import "ViewController.h"
+#import "BleUtils.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    BleUtils *mBleUtils;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    mBleUtils = [[BleUtils alloc] init];
+    [mBleUtils startScan];
 }
 
 - (void)didReceiveMemoryWarning
